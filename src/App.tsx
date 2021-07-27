@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-import logo from "./logo.svg";
+import logo from "@/logo.svg";
 
-import "./App.css";
+import "@/App.css";
+import Test3 from "@/test/test2/test3";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
   return (
     <div className="App">
@@ -39,6 +40,7 @@ function App() {
             Vite Docs
           </a>
         </p>
+        <Test3 />
       </header>
     </div>
   );
