@@ -20,7 +20,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["simple-import-sort", "prettier"],
+  plugins: ["prettier"],
   settings: {
     react: {
       version: "detect",
@@ -33,8 +33,6 @@ module.exports = {
     "jsx-a11y/accessible-emoji": "off",
     "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    // "simple-import-sort/imports": "error",
-    // "simple-import-sort/exports": "error",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
