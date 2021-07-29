@@ -4,6 +4,7 @@ module.exports = {
     browser: true,
     amd: true,
     node: true,
+    jest: true,
   },
   extends: [
     "eslint:recommended",
@@ -20,7 +21,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["prettier"],
+  plugins: ["jest", "prettier"],
   settings: {
     react: {
       version: "detect",
