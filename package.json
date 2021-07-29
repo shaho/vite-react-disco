@@ -1,7 +1,23 @@
 {
   "name": "vite-react-disco",
   "version": "0.0.0",
+  "author": "Shaho Toofani",
+  "description": "React starter boilerplate based on vite.js with extra features",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shaho/vite-react-disco.git"
+  },
+  "keywords": [
+    "vite",
+    "react",
+    "starter",
+    "typescrpt",
+    "react testing library"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "scripts": {
     "dev": "vite --open",
     "build": "tsc && vite build",

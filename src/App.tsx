@@ -3,9 +3,8 @@ import { useState } from "react";
 import logo from "@/logo.svg";
 
 import "@/App.css";
-import Test3 from "@/test/test2/test3";
 
-function App() {
+export default function App() {
   const [count, setCount] = useState<number>(0);
 
   return (
@@ -40,10 +39,7 @@ function App() {
             Vite Docs
           </a>
         </p>
-        <Test3 />
       </header>
     </div>
   );
 }
-
-export default App;
