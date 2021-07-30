@@ -1,5 +1,5 @@
 import * as constants from "./constants";
-import { Filters, Todo } from "../types";
+import { Filters, Todo } from "@/types";
 
 export interface BaseAction {
   type: string;

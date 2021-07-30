@@ -9,6 +9,7 @@ import reducers, { StateType } from "./reducers";
 export interface ApplicationState {
   app: StateType;
 }
+
 const rootSaga = function* () {
   yield all([...sagas]);
 };
@@ -21,4 +22,5 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(sagaMiddleware)),
 );
 sagaMiddleware.run(rootSaga);
+
 export { store };

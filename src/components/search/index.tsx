@@ -1,10 +1,12 @@
 import { useState, ChangeEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ApplicationState } from "../../redux/store";
-import * as actions from "../../redux/actions";
+
+import { ApplicationState } from "@/redux/store";
+import * as actions from "@/redux/actions";
+
 import { SearchBox, Input, Form } from "./styles";
 
-function Search() {
+export default function Search() {
   const dispatch = useDispatch();
   const { filter } = useSelector((state: ApplicationState) => state.app);
   const [val, setVal] = useState("");
@@ -31,5 +33,3 @@ function Search() {
     </SearchBox>
   );
 }
-
-export default Search;

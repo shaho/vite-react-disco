@@ -1,10 +1,12 @@
-import { Todo } from "../../types";
+import { Todo } from "@/types";
+
 import { Table } from "./styles";
 
 type Props = {
   data: Todo[];
 };
-function TodosTable({ data }: Props) {
+
+export default function TodosTable({ data }: Props) {
   return (
     <Table>
       <thead>
@@ -26,4 +28,3 @@ function TodosTable({ data }: Props) {
     </Table>
   );
 }
-export default TodosTable;

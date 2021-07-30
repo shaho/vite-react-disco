@@ -6,14 +6,17 @@ import {
   CallEffect,
   select,
 } from "redux-saga/effects";
-import * as actions from "./actions";
-import * as constants from "./constants";
-import * as services from "../utils/services";
-import * as helpers from "../utils/helpers";
 import { AxiosResponse } from "axios";
+
+import * as actions from "./actions";
 import { BaseAction } from "./actions";
+import * as constants from "./constants";
 import { ApplicationState } from "./store";
-import { Todo } from "types";
+
+import * as services from "@/utils/services";
+import * as helpers from "@/utils/helpers";
+
+import { Todo } from "@/types";
 
 export const getStoredTodos = (state: ApplicationState) => state.app.list;
 
@@ -47,6 +50,7 @@ export function* filterTodos(action: BaseAction) {
   yield put(actions.setKeyword(action.payload.keyword));
   yield put(actions.setFiltered(searchResults));
 }
+
 export function* searchTodosSaga() {
   yield takeLatest(constants.FILTER, filterTodos);
 }

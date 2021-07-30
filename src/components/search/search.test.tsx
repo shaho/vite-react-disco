@@ -1,9 +1,9 @@
-import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { Provider as ReduxProvider } from "react-redux";
-import * as actions from "../../redux/actions";
-import Search from ".";
 import { AnyAction, Store } from "redux";
+
+import * as actions from "@/redux/actions";
+import Search from ".";
 
 const dispatchedActions: AnyAction[] = [];
 const fakeStore: Store<any, AnyAction> = {
@@ -34,6 +34,7 @@ describe("Search Component", () => {
     expect(container).toBeTruthy();
     expect(getByText("Search:")).toBeTruthy();
   });
+
   test("handle search", () => {
     const { getByPlaceholderText } = render(
       <ReduxProvider store={fakeStore}>

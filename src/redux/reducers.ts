@@ -1,6 +1,7 @@
 import * as constants from "./constants";
 import { BaseAction } from "./actions";
-import { Todo, Filters } from "../types";
+
+import { Todo, Filters } from "@/types";
 
 export interface StateType {
   list?: Todo[];
@@ -20,7 +21,8 @@ const initial: StateType = {
   message: "",
   loading: false,
 };
-function reducer(state = initial, action: BaseAction) {
+
+export default function reducer(state = initial, action: BaseAction) {
   switch (action.type) {
     case constants.SET_ALL:
       return { ...state, ...action.payload };
@@ -38,4 +40,3 @@ function reducer(state = initial, action: BaseAction) {
       return state;
   }
 }
-export default reducer;

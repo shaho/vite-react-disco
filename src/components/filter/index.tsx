@@ -1,12 +1,13 @@
-/* eslint-disable jsx-a11y/no-onchange */
 import { useState, ChangeEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ApplicationState } from "../../redux/store";
-import { Filters } from "../../types";
-import * as actions from "../../redux/actions";
+
+import { ApplicationState } from "@/redux/store";
+import { Filters } from "@/types";
+import * as actions from "@/redux/actions";
+
 import { FilterBox } from "./styles";
 
-function Filter() {
+export default function Filter() {
   const dispatch = useDispatch();
   const { keyword } = useSelector((state: ApplicationState) => state.app);
   const [val, setVal] = useState(0);
@@ -29,5 +30,3 @@ function Filter() {
     </FilterBox>
   );
 }
-
-export default Filter;

@@ -1,10 +1,11 @@
-import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { Provider as ReduxProvider } from "react-redux";
-import * as actions from "../../redux/actions";
-import Filter from ".";
 import { AnyAction, Store } from "redux";
-import { Filters } from "../../types";
+
+import * as actions from "@/redux/actions";
+import Filter from ".";
+
+import { Filters } from "@/types";
 
 const dispatchedActions: AnyAction[] = [];
 const fakeStore: Store<any, AnyAction> = {
@@ -35,6 +36,7 @@ describe("Filter Component", () => {
     expect(container).toBeTruthy();
     expect(getByText("Completed:")).toBeTruthy();
   });
+
   test("handle filter", () => {
     const { getByTestId } = render(
       <ReduxProvider store={fakeStore}>

@@ -1,6 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { data } from "../../test/mock-data";
+
+import { data } from "@/test/mock-data";
 import TodosTable from ".";
 
 describe("TodosTable Component", () => {
