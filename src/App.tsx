@@ -1,52 +1,45 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import * as actions from "./redux/actions";
-import TodosTable from "./components/todos-table";
-import Search from "./components/search";
-import Filter from "./components/filter";
-import GlobalStyle from "./styles/global-styles";
-import { ApplicationState } from "./redux/store";
-import { Todo } from "./types";
-import Alert from "./components/alert";
-import Loading from "./components/loading";
-import { Container, Box } from "./styles";
+import { useState } from "react";
 
-function App() {
-  const { failure, loading, list, message, filtered, filter, keyword } =
-    useSelector((state: ApplicationState) => state.app);
-  const dispatch = useDispatch();
+import logo from "@/logo.svg";
 
-  useEffect(() => {
-    dispatch(actions.getList());
-    // will unmount
-    return () => {
-      dispatch(actions.setList([]));
-    };
-  }, [dispatch]);
+import "@/App.css";
 
-  const renderTodos = (mlist?: Todo[]) => {
-    const todos = keyword || filter !== "All" ? filtered : mlist;
-    if (todos && todos.length) {
-      return <TodosTable data={todos} />;
-    }
-    return <Alert>No result for the given search parameters!</Alert>;
-  };
+export default function App() {
+  const [count, setCount] = useState<number>(0);
 
   return (
-    <Container>
-      <GlobalStyle />
-      <h1>Todos</h1>
-      {!loading && !failure && (
-        <Box>
-          <Search />
-          <Filter />
-        </Box>
-      )}
-      {failure && <Alert>Error: {message}</Alert>}
-      {loading && <Loading />}
-      {!loading && !failure && renderTodos(list)}
-    </Container>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Hello Vite + React!</p>
+        <p>
+          <button type="button" onClick={() => setCount((count) => count + 1)}>
+            count is: {count}
+          </button>
+        </p>
+        <p>
+          Edit <code>App.tsx</code> and save to test HMR updates.
+        </p>
+        <p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          {" | "}
+          <a
+            className="App-link"
+            href="https://vitejs.dev/guide/features.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vite Docs
+          </a>
+        </p>
+      </header>
+    </div>
   );
 }
-
-export default App;
