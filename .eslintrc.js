@@ -4,6 +4,7 @@ module.exports = {
     browser: true,
     amd: true,
     node: true,
+    jest: true,
   },
   extends: [
     "eslint:recommended",
@@ -20,7 +21,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["prettier"],
+  plugins: ["jest", "prettier"],
   settings: {
     react: {
       version: "detect",
@@ -31,6 +32,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
     "jsx-a11y/accessible-emoji": "off",
+    "jsx-a11y/no-onchange": "off",
     "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "jsx-a11y/anchor-is-valid": [

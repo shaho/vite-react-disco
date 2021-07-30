@@ -17,7 +17,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@/test": ["src/test"]
+      "@/test": ["src/test"],
+      "@/components": ["src/components"],
+      "@/styles": ["src/styles"],
+      "@/redux": ["src/redux"],
+      "@/utils": ["src/utils"]
     }
   },
   "include": ["./src"]
