@@ -3,6 +3,8 @@ import { useState } from "react";
 import logo from "@/logo.svg";
 
 import "@/App.css";
+import Welcome from "./Welcome";
+import Button from "./Button";
 
 export default function App() {
   const [count, setCount] = useState<number>(0);
@@ -36,10 +38,13 @@ export default function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Vite Docs
+            Vite Docs!
           </a>
         </p>
+        <Button variant="primary">Submit</Button>
       </header>
+
+      <Welcome />
     </div>
   );
 }
