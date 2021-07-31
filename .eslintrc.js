@@ -11,6 +11,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:tailwindcss/recommended",
     "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
@@ -21,7 +22,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["jest", "prettier"],
+  plugins: ["jest", "prettier", "tailwindcss"],
   settings: {
     react: {
       version: "detect",
