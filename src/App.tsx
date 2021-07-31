@@ -3,8 +3,7 @@ import { useState } from "react";
 import logo from "@/logo.svg";
 
 import "@/App.css";
-import Welcome from "./Welcome";
-import Button from "./Button";
+import Button from "@/components/@ui/Button";
 
 export default function App() {
   const [count, setCount] = useState<number>(0);
@@ -15,9 +14,12 @@ export default function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <Button
+            variant="secondary"
+            onClick={() => setCount((count) => count + 1)}
+          >
             count is: {count}
-          </button>
+          </Button>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
@@ -41,10 +43,7 @@ export default function App() {
             Vite Docs!
           </a>
         </p>
-        <Button variant="primary">Submit</Button>
       </header>
-
-      <Welcome />
     </div>
   );
 }
