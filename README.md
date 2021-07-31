@@ -1,5 +1,6 @@
 # VITE React Disco 🎼
 
+<div style="display: flex; flex-direction: column">
 <img src="https://img.shields.io/badge/vite.js%20-%2335495e.svg?&style=for-the-badge&logo=vite&logoColor=white">
 <img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB">
 <img src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white">
@@ -9,6 +10,7 @@
 <img src="https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white">
 
 <img src="https://img.shields.io/badge/husky.js%20-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+</div>
 
 <br />
 React/Vite starter project integrated with TypeScript, ESlint, Prettier, Jest,
@@ -32,8 +34,10 @@ path mapping.
 
 ## Styled Components + TailwindCSS + Twin Support
 
+<div style="display: flex; flex-direction: column">
 <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" />
 <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
+</div>
 
 ```shell
     npx degit shaho/vite-react-disco#tailwind-styled-components my-app
