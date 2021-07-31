@@ -24,10 +24,16 @@ path mapping.
     npx degit shaho/vite-react-disco my-app && cd my-app && yarn
 ```
 
+## <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="nestjs" width="32" height="32" /> TailwindCSS Support
+
+```shell
+    npx degit shaho/vite-react-disco#tailwindcss my-app
+```
+
 **NOTE** <br/>
 
 > <br/>
-> The project will be integrated wit Tailwind CSS, Styled Components, Axios, Redux, Redux Saga<br />
+> The project will be integrated with Styled Components, Axios, Redux, Redux Saga<br />
 > <br/>
 
 ### Why Vite?

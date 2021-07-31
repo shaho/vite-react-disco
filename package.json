@@ -15,7 +15,7 @@
     "typescrpt",
     "prettier",
     "eslint",
-    "jesr",
+    "jest",
     "react testing library"
   ],
   "engines": {
