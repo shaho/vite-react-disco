@@ -1,0 +1,15 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "search.exclude": {
+    "**/.next": true,
+    "**/build": true,
+    "**/node_modules": true,
+    "**/*-cache": true,
+    "**/dist": true,
+    "yarn.lock": true,
+    "**/*.mdx": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
